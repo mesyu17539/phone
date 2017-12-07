@@ -8,13 +8,19 @@ public class IPhoneBean extends CelPhoneBean{
 		//Area
 		return String.format("%s이기 때문에 %s에서 %s으로 %s에게 "
 				+ "%s 이라고 문자를 보냄",
-				KIND, move, BRAND, call,data);
+				KIND, move, comany, call,data);
 	}
 	public String getData() {
 		return data;
 	}
-	void setData(String data) {
-		setMove("이동");
+	public void setData(String data) {
+		setPortable(true);
+		this.data = data;
+	}
+	public void setData(String name, String data) {
+		setComany(BRAND);
+		setPortable(true);
+		setCall(name);
 		this.data = data;
 	}
 }
